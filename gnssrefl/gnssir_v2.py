@@ -266,6 +266,8 @@ def gnssir_guts_v2(station,year,doy, snr_type, extension,lsp):
             ele = snrD[:,1]
             ele=apply_refraction_corr(lsp,ele,p,T)
 
+        print(f'JJODATASCIENCE_p2_{snrD.shape}')
+        
         # apply an elevation mask for all the data for the polynomial fit
         i= (ele >= pele[0]) & (ele < pele[1])
         ele = ele[i]
@@ -274,6 +276,8 @@ def gnssir_guts_v2(station,year,doy, snr_type, extension,lsp):
         sats = snrD[:,0]
         # make sure the snrD array has elevation angles fixed
         snrD[:,1] = ele # ????
+
+        print(f'JJODATASCIENCE_p3_{snrD.shape}')
 
         # open output file
         fout,frej = g.open_outputfile(station,year,doy,extension) 
