@@ -167,7 +167,7 @@ def gnssir(station: str, year: int, doy: int, snr: int = 66, plt: bool = False, 
         only useful when processing more than 1 year at once using -year_end argument
 
     """
-
+    print('JJODATASCIENCE_p4_helloworld')
 #   make sure environment variables exist.  set to current directory if not
     g.check_environ_variables()
 
