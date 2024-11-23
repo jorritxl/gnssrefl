@@ -181,6 +181,7 @@ def gnssir(station: str, year: int, doy: int, snr: int = 66, plt: bool = False, 
         number of parallel processing jobs. 
 
     """
+    print('JJODATASCIENCE_p3_helloworld')
     vers = 'gnssrefl version ' + str(g.version('gnssrefl'))
     print('You are running ', vers)
 
